@@ -68,8 +68,7 @@ with open(edge_path,'w') as fout:
 # Drop any duplicates
 edge_df = pd.read_table(edge_path)
 edge_df = edge_df.drop_duplicates()
-edge_df.to_csv(edge_path, sep = '\t', index=False)
-
+edge_df.to_csv(edge_path, sep = '\t', index=False) 
 
 
 
