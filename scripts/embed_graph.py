@@ -15,6 +15,8 @@ graph_name = args.graph_name
 node_file = f'{graph_name}_node_list.tsv' #args.node_file
 edge_file = f'{graph_name}_edge_list.tsv' #args.edge_file
 
+print(node_file)
+print(edge_file)
 
 '''Build Graph'''
 data_dir = '../data'
@@ -45,6 +47,8 @@ graph = Graph.from_csv(# Edges
                       name = graph_name,
                       verbose = True)
 graph.remove_disconnected_nodes()
+
+
 
 
 
