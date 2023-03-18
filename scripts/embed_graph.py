@@ -4,7 +4,7 @@ import os
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_arguemtn('-g', '--graph_name', type = str)
+parser.add_argument('-g', '--graph_name', type = str)
 args = parser.parse_args()
 graph_name = args.graph_name
 
@@ -44,7 +44,7 @@ graph = Graph.from_csv(# Edges
                       directed = False,
                       name = graph_name,
                       verbose = True)
-graph.remove_ disconnected_nodes()
+graph.remove_disconnected_nodes()
 
 
 
