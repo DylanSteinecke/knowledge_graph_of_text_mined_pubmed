@@ -1,4 +1,5 @@
-input/
-data/
+input/textcube_pmid2category.json
+data/os/*.tsv
+data/cvd/*.tsv
 output/
 scripts/old

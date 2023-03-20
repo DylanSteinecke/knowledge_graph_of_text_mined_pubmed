@@ -5,7 +5,7 @@ import pandas as pd
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_arguemtn('-g', '--graph_name', type = str)
+parser.add_argument('-g', '--graph_name', type = str)
 args = parser.parse_args()
 
 graph_name = args.graph_name
@@ -52,7 +52,7 @@ with open(edge_path,'w') as fout:
 
     # MeSH 'Tree'
     for cat in cat_to_pmids:
-        edge_writer.writerow([f'MeSH:{graph_name}_Root', '-parent_of->', 'MeSH:'+cat, '1'])
+        edge_writer.writerow([str(f"MeSH:{graph_name}_Root"), '-parent_of->', 'MeSH:'+cat, '1'])
     
     # Protein -observed_in- PMID
     for pmid, proteins_to_counts in pmid_to_protein_to_count.items():
@@ -78,7 +78,7 @@ with open(node_path,'w') as fout:
     node_writer.writerow(['node', 'node_type'])
     
     # MeSH Nodes
-    node_writer.writerow([f'MeSH:{graph_name}_Root', 'f{graph_name}_MeSH'])
+    node_writer.writerow([f'MeSH:{graph_name}_Root', f'{graph_name}_MeSH'])
     for cat in cat_to_pmids:
         node_writer.writerow(['MeSH:'+cat, f'{graph_name}_MeSH'])
     

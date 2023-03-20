@@ -4,7 +4,7 @@ import os
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_arguemtn('-g', '--graph_name', type = str)
+parser.add_argument('-g', '--graph_name', type = str)
 args = parser.parse_args()
 graph_name = args.graph_name
 
@@ -15,6 +15,8 @@ graph_name = args.graph_name
 node_file = f'{graph_name}_node_list.tsv' #args.node_file
 edge_file = f'{graph_name}_edge_list.tsv' #args.edge_file
 
+print(node_file)
+print(edge_file)
 
 '''Build Graph'''
 data_dir = '../data'
@@ -44,7 +46,9 @@ graph = Graph.from_csv(# Edges
                       directed = False,
                       name = graph_name,
                       verbose = True)
-graph.remove_ disconnected_nodes()
+graph.remove_disconnected_nodes()
+
+
 
 
 
