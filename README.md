@@ -9,7 +9,7 @@ First, upload the input files into the input/{disease_name} folder for whatever 
 
 - textcube_config.json: list of the different categories' names (e.g., cardiovascular diseases)
 
-- textcube_category2pmid.json: list of lists of PubMed IDs (PMID). Each list contains the PMIDs studying that category number. Category 0 is named in the 0th entry of the previous file.  
+- textcube_category2pmid.json: list of lists of PubMed IDs (PMID). Each list contains the PMIDs studying that category number. Category 0 is named in the 0th entry of the previous file.  (EDIT: might be better to do metadata_category2pmids.json)
 
 - metadata_pmid2pcount.json: dictionary of PMIDs to entity found in the PMID (i.e., protein) to the number of times it was found there
 
