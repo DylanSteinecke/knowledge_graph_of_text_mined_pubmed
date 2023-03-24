@@ -1,4 +1,4 @@
-# ca_channel
+# ca_channel 
 ## Biological Task
 To generate knowledge graph embeddings based on text data (i.e., protein occurrences in PubMed articles studying certain topics). Proteins of interest here are calcium channel proteins. Topics of interest here are oxidative stress and cardiovascular disease. 
 
